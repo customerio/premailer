@@ -74,6 +74,8 @@ class Premailer
             end
           end
 
+          merged.create_shorthand!
+
           # write the inline STYLE attribute
           el['style'] = Premailer.escape_string(merged.declarations_to_s)
         end
